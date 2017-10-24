@@ -7,7 +7,7 @@ using System.Data.SqlClient; // This namespace is required to use methods of Sql
 private void QueryDatabase(string SQLConnectionString, int SQLTimeout = 120)
 {
 	SqlConnection conn = new SqlConnection(SQLConnectionString);
-  SqlCommand comm = null;
+ 	SqlCommand comm = null;
 	
 	DataTable DT = new DataTable();
 	
