@@ -44,7 +44,7 @@ private void QueryDatabase(string SQLConnectionString, int SQLTimeout = 120)
             }
             finally
             {
-                conn.Close(); // Always remeber to close connection to database or else it would lead to memory leakage
+                conn.Close(); // Always remember to close connection to database or else it would lead to memory leakage
             }
 }
 
