@@ -46,6 +46,14 @@ private void QueryDatabase(string SQLConnectionString, int SQLTimeout = 120)
             {
                 conn.Close(); // Always remember to close connection to database or else it would lead to memory leakage
             }
+	
+	
+	    /* // Uncomment this part if you are retrieving data from DataTable
+	    if(DT.Rows.Count > 0)
+	    {
+		    //Do something here
+	    }
+	    */
 }
 
 
