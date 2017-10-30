@@ -40,7 +40,7 @@ private void QueryDatabase(string SQLConnectionString, int SQLTimeout = 120)
             }
             catch (Exception ex)
             {
-		throw new Exception(ex.Message.ToSTring());
+		throw new Exception(ex.Message.ToString());
             }
             finally
             {
