@@ -35,7 +35,7 @@ private void QueryDatabase(string SQLConnectionString, int SQLTimeout = 120)
                 }
                 catch (SqlException err)
                 {
-		    throw new CustomSqlException("Something went wrong....! ", err.Message);
+		    throw new CustomSqlException("Something went wrong....! ", err);
                 }
             }
             catch (Exception ex)
