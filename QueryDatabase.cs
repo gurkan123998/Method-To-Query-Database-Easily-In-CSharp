@@ -25,7 +25,11 @@ private void QueryDatabase(string SQLConnectionString, int SQLTimeout = 120)
 		    * // For more info visit: https://msdn.microsoft.com/en-us/library/system.data.sqldbtype(v=vs.110).aspx
                     * comm.Parameters.Add(new SqlParameter("@FieldName", SqlDbType.VarChar, 100)).Value = yourPassedParameter;
 		    */
-                    conn.Open(); // Always remember to open connection before executing the Query.
+			if( conn.State == ConnectionState.Closed )
+			{
+			conn.Open(); // Always remember to open connection before executing the Query.
+			}
+                    
                     comm.ExecuteNonQuery(); // Comment this line and uncomment the lines below to retrieve data in DataTable
 		    /*
 		    * //Uncomment this part to fetch data from table in DataTable using SqlDataAdapter -->
